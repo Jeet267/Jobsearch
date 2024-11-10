@@ -86,7 +86,7 @@ const Signup = () => {
             <Label>Full Name</Label>
             <Input
               type="text"
-              placeholder="Ayush"
+              placeholder="Abhijeet"
               value={input.fullName}
               name="fullName"
               onChange={changeEventHandler}
@@ -96,7 +96,7 @@ const Signup = () => {
             <Label>Email</Label>
             <Input
               type="email"
-              placeholder="Ayush@gmail.com"
+              placeholder="ajtkr200@gmail.com"
               value={input.email}
               name="email"
               onChange={changeEventHandler}
