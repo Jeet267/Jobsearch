@@ -27,7 +27,7 @@ app.get('/home', (req, res) => {
 });
 
 const corsOptions = {
-    origin: 'http://localhost:5173',  // Corrected URL
+    origin: 'https://jobsearch-733g.onrender.com',  // Corrected URL
     credentials: true
 };
 
