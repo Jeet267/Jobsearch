@@ -27,7 +27,8 @@ app.get('/home', (req, res) => {
 });
 
 const corsOptions = {
-    origin: 'https://jobsearch-733g.onrender.com',  // Corrected URL
+    // origin: 'https://jobsearch-733g.onrender.com',
+    origin: "http://localhost:5173",
     credentials: true
 };
 
@@ -39,6 +40,8 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application",applicationRoute);
+// app.use("/api/v1/application",applicationRoute);
+
 app.use(express.static(path.join(__dirname,"/frontend/dist")))
 
 app.get("*",(_,res)=>{
