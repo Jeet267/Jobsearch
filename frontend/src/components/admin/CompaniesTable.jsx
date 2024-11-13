@@ -6,7 +6,6 @@ import { Edit2, MoreHorizontal } from 'lucide-react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
-
 const CompaniesTable = () => {
     const { companies, searchCompanyByText } = useSelector(store => store.company);
     const [filterCompany, setFilterCompany] = useState(companies);
@@ -35,8 +34,9 @@ const CompaniesTable = () => {
                 </TableHeader>
                 <TableBody>
                     {
-                        filterCompany?.map((company) => (
-                            <tr>
+                        filterCompany?.map((company,index) => (
+                           
+                            <tr key={index}>
                                 <TableCell>
                                     <Avatar>
                                         <AvatarImage src={company.logo}/>
@@ -56,6 +56,7 @@ const CompaniesTable = () => {
                                     </Popover>
                                 </TableCell>
                             </tr>
+                          
 
                         ))
                     }

@@ -1,9 +1,11 @@
-export const USER_API_END_POINT = "http://localhost:5173/api/v1/user"
-// "https://jobsearch-733g.onrender.com/api/v1/user"
-export const APPLICATION_API_END_POINT="http://localhost:5173/api/v1/application"
-// "https://jobsearch-733g.onrender.com/api/v1/application";
-export const JOB_API_END_POINT = "http://localhost:5173/api/v1/job"
-// "https://jobsearch-733g.onrender.com/api/v1/job";
+let ENDPOINT;
 
-export const COMPANY_API_END_POINT="http://localhost:5173/api/v1/company"
-// "https://jobsearch-733g.onrender.com/api/v1/company";
+if (process.env.NODE_ENV === "production") {
+  console.log("production");
+  ENDPOINT = "https://job-portal-mz2k.onrender.com";
+} else {
+
+  ENDPOINT = "http://localhost:8000";
+}
+
+export default ENDPOINT;
