@@ -19,7 +19,7 @@ app.use(cookieParser());
 const corsOptions = {
     // origin:['https://job-portal-mz2k.onrender.com',"http://localhost:5173"],
     origin:
-        'http://localhost:8000',
+        'http://localhost:5173',
         
      
       
