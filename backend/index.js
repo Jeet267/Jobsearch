@@ -16,10 +16,21 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
+const allowedOrigins = [
+    'https://jobsearch-khaki.vercel.app',
+    'https://jobsearch-733g.onrender.com'
+];
+
 const corsOptions = {
-    origin:'https://jobsearch-khaki.vercel.app',
-    credentials:true
-}
+    origin: (origin, callback) => {
+        if (allowedOrigins.includes(origin) || !origin) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true
+};
 
 app.use(cors(corsOptions));
 
