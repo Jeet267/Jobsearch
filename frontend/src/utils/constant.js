@@ -1,11 +1,4 @@
-let ENDPOINT;
-
-if (process.env.NODE_ENV === "production") {
-  console.log("production");
-  ENDPOINT = "https://job-portal-mz2k.onrender.com";
-} else {
-
-  ENDPOINT = "http://localhost:8000";
-}
-
-export default ENDPOINT;
+export const USER_API_END_POINT="http://localhost:8002/api/v1/user";
+export const JOB_API_END_POINT="http://localhost:8002/api/v1/job";
+export const APPLICATION_API_END_POINT="http://localhost:8002/api/v1/application";
+export const COMPANY_API_END_POINT="http://localhost:8002/api/v1/company";
